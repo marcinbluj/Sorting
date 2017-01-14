@@ -37,12 +37,13 @@ public class PersonList extends JList<Person> implements ListSelectionListener, 
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        int index = this.getSelectedIndex();
 
+        int index = this.getSelectedIndex();
+        if (e.getValueIsAdjusting()) {
             name.setText(list.get(index).getName());
             lastName.setText(list.get(index).getLastName());
             year.setText(Integer.toString(list.get(index).getYear()));
-
+        }
     }
 
     @Override
