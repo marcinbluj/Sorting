@@ -36,6 +36,15 @@ public class AddPersonButton extends JButton implements MouseListener {
             throw new IllegalArgumentException("Brak argumentow.");
 
         } else {
+//            for (int i = 0; i < Person.getPeopleList().size(); i++) {
+//
+//                if (Person.getPeopleList().get(i).getName().equals(name.getText())
+//                        && (Person.getPeopleList().get(i).getLastName().equals(lastName.getText()))
+//                        && (Person.getPeopleList().get(i).getYear() == (Integer.parseInt(year.getText())))) {
+//
+//                    Person.getPeopleList().remove(i);
+//                }
+//            }
             new Person(name.getText(), lastName.getText(), Integer.parseInt(year.getText()));
         }
     }
