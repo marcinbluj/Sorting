@@ -26,9 +26,6 @@ public class ListWindow extends JFrame {
 
             char upperCaseChar = ((char) i);
             lettersList.add(Character.toLowerCase(upperCaseChar));
-            System.out.println((char) i);
-            System.out.println(Character.toLowerCase(upperCaseChar));
-
         }
 
 
