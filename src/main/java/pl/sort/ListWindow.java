@@ -43,7 +43,6 @@ public class ListWindow extends JFrame {
         setName("aaa");
         setVisible(true);
 
-
         new Person("Marcin", "Bluj", 1992);
         new Person("Macin", "Blu", 1991);
         new Person("Marci", "uj", 1990);
@@ -62,31 +61,28 @@ public class ListWindow extends JFrame {
 
         add(personJList);
 
-        AddPersonButton addPersonButton = new AddPersonButton("AddPerson", new Dimension(355, 300), new Dimension(200, 25), name, lastName, year, personJList);
+        AddPersonButton addPersonButton = new AddPersonButton("AddPerson", new Dimension(355, 300),
+                new Dimension(200, 25), name, lastName, year, personJList);
         add(addPersonButton);
 
         add(new SortButton("SortByName",
-                new Dimension(5, 210),
-                new Dimension(300, 25),
-                Person.getPeopleList(), new NameComparator(), personJList));
+                new Dimension(5, 210), new Dimension(300, 25), Person.getPeopleList(),
+                new NameComparator(), personJList));
 
-        add(new SortButton("SortByLastName",
-                new Dimension(5, 240),
-                new Dimension(300, 25),
+        add(new SortButton("SortByLastName", new Dimension(5, 240), new Dimension(300, 25),
                 Person.getPeopleList(), new LastNameComparator(), personJList));
 
-        add(new SortButton("SortByBirthYear",
-                new Dimension(5, 270),
-                new Dimension(300, 25),
+        add(new SortButton("SortByBirthYear", new Dimension(5, 270), new Dimension(300, 25),
                 Person.getPeopleList(), new Comparator<Person>() {
+
             @Override
             public int compare(Person o1, Person o2) {
                 return o1.compareTo(o2);
             }
+
         }, personJList));
 
         repaint();
-
     }
 }
 

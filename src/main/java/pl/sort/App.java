@@ -1,13 +1,11 @@
 package pl.sort;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+
+
+        new Person("Anna", "Saczawa", 1994);
         new ListWindow();
     }
 }
