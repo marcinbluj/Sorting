@@ -7,9 +7,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-/**
- * Created by MSI on 13.01.2017.
- */
 public class AddPersonButton extends JButton implements MouseListener {
 
     private IOTextField name;
